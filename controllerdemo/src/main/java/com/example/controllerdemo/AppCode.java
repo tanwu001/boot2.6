@@ -3,7 +3,7 @@ package com.example.controllerdemo;
 import lombok.Getter;
 
 @Getter
-public enum  AppCode implements StatusCode {
+public enum  AppCode {
 
     APP_ERROR(2000, "业务异常"),
     PRICE_ERROR(2001, "价格异常");

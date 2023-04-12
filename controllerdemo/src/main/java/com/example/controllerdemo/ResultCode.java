@@ -4,7 +4,7 @@ package com.example.controllerdemo;
 import lombok.Getter;
 
 @Getter
-public enum ResultCode implements StatusCode{
+public enum ResultCode{
    
     SUCCESS(1000, "请求成功"),
     FAILED(1001, "请求失败"),

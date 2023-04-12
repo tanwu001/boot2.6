@@ -10,7 +10,7 @@ public class APIException extends RuntimeException {
     private String msg;
 
     // 手动设置异常
-    public APIException(StatusCode statusCode, String message) {
+    public APIException(AppCode statusCode, String message) {
    
      
         // message用于用户设置抛出错误详情，例如：当前价格-5，小于0

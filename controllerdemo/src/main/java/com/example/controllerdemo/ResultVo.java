@@ -33,7 +33,7 @@ public class ResultVo<T> {
     }
 
     // 返回指定状态码，数据对象
-    public ResultVo(StatusCode statusCode, T data) {
+    public ResultVo(ResultCode statusCode, T data) {
    
      
         this.code = statusCode.getCode();
@@ -42,7 +42,7 @@ public class ResultVo<T> {
     }
 
     // 只返回状态码
-    public ResultVo(StatusCode statusCode) {
+    public ResultVo(ResultCode statusCode) {
         this.code = statusCode.getCode();
         this.msg = statusCode.getMsg();
         this.data = null;
