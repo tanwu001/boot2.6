@@ -16,8 +16,6 @@ public class ResultVo<T> {
 
     // 手动设置返回vo
     public ResultVo(int code, String msg, T data) {
-   
-     
         this.code = code;
         this.msg = msg;
         this.data = data;
@@ -34,8 +32,6 @@ public class ResultVo<T> {
 
     // 返回指定状态码，数据对象
     public ResultVo(ResultCode statusCode, T data) {
-   
-     
         this.code = statusCode.getCode();
         this.msg = statusCode.getMsg();
         this.data = data;

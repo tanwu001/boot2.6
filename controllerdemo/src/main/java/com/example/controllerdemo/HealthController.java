@@ -19,10 +19,13 @@ public class HealthController {
 
     @PostMapping("/findByVo")
     public ProductInfo findByVo(@Validated ProductInfoVo vo) {
-
-
         ProductInfo productInfo = new ProductInfo();
         BeanUtils.copyProperties(vo, productInfo);
         return productInfo;
+    }
+
+    @GetMapping("/t1")
+    public Integer t1() {
+        return 1 / 0;
     }
 }

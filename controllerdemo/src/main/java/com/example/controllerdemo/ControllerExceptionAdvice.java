@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class ControllerExceptionAdvice {
    
-     
 
     @ExceptionHandler({BindException.class})
     public ResultVo MethodArgumentNotValidExceptionHandler(BindException e) {
@@ -22,5 +21,11 @@ public class ControllerExceptionAdvice {
     public ResultVo APIExceptionHandler(APIException e) {
         // log.error(e.getMessage(), e); 由于还没集成日志框架，暂且放着，写上TODO
         return new ResultVo(e.getCode(), e.getMsg(), e.getMessage());
+    }
+
+    @ExceptionHandler(Exception.class)
+    public ResultVo ExceptionHandler(Exception e) {
+        // log.error(e.getMessage(), e); 由于还没集成日志框架，暂且放着，写上TODO
+        return new ResultVo(ResultCode.FAILED, e.getMessage());
     }
 }
